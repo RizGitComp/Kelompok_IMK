@@ -1,0 +1,153 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #fff9f0, #fff0e6);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Header Title */
+  .header-title {
+    position: absolute;
+    top: 40px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Login Container */
+  .container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    z-index: 2;
+  }
+  
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .input-box {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    background: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .input-box .icon {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+  
+  input {
+    border: none;
+    background: transparent;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+  }
+  
+  /* Sign In Button */
+  button {
+    margin-top: 25px;
+    padding: 10px;
+    background: linear-gradient(to right, #00c853, #64dd17);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.02);
+    opacity: 0.95;
+  }
+  
+  /* Animated Background Shapes */
+  .shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 0;
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .shape1 {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(45deg, #ff6d00, #ffc107);
+    top: 100px;
+    left: 40px;
+  }
+  
+  .shape2 {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    bottom: 60px;
+    right: 50px;
+  }
+  
+  .shape3 {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(225deg, #ffb300, #f57c00);
+    top: 60%;
+    right: 20%;
+  }
+  
+  /* Floating Animation */
+  @keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .header-title {
+      font-size: 24px;
+      top: 30px;
+      padding: 0 15px;
+    }
+  
+    .container {
+      width: 90%;
+      padding: 30px 20px;
+    }
+  
+    .shape1 {
+      top: 120px;
+      left: 10px;
+      width: 80px;
+      height: 80px;
+    }
+  
+    .shape2 {
+      bottom: 40px;
+    }

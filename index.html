@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplikasi Data Mahasiswa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background Shapes -->
+  <div class="shape shape1"></div>
+  <div class="shape shape2"></div>
+  <div class="shape shape3"></div>
+
+  <!-- Header -->
+  <div class="header-title">Aplikasi Data Mahasiswa</div>
+
+  <!-- Login Form -->
+  <div class="container">
+    <form action="login.php" method="POST">
+      <label for="email">Your email</label>
+      <div class="input-box">
+        <span class="icon">👤</span>
+        <input type="email" name="email" placeholder="e.g. king@email.com" required />
+      </div>
+
+      <label for="password">Your password</label>
+      <div class="input-box">
+        <span class="icon">🔒</span>
+        <input type="password" name="password" placeholder="e.g. yesking123" required />
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>
