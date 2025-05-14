@@ -7,7 +7,6 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'mahasiswa') {
   exit();
 }
 
-
 // Ambil nama mahasiswa
 $nim = $_SESSION['user']['nim'];
 $query = "SELECT nama FROM mahasiswa WHERE nim = '$nim'";

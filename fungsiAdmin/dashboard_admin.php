@@ -19,9 +19,13 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
 <body>
 <!-- Navbar -->
 <nav class="navbar">
-  <div class="navbar-title">Aplikasi Data Mahasiswa</div>
+  <div class="navbar-left">
+    <div class="navbar-title">Aplikasi Data Mahasiswa</div>
+    <a href="create.php" class="btn-nav">+ Tambah Mahasiswa</a>
+    <a href="log.php" class="btn-nav">Lihat Aktivitas Sistem</a>
+  </div>
   <div class="navbar-right">
-    <a href="log.php">Aktivitas Sistem</a>
+    <a href="logout.php" class="btn-logout" onclick="return confirm('Yakin ingin logout?')">Logout</a>
   </div>
 </nav>
 
@@ -33,9 +37,8 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
   <div class="toolbar">
   <button class="btn" id="editBtn" disabled>✏️ Edit Data</button>
   <button class="btn" id="deleteBtn" disabled>🗑️ Hapus Data</button>
-  <button class="btn" id="logBtn" disabled>📄 Lihat Riwayat Aktivitas</button>
   <button class="btn" id="routeBtn" disabled>📍 Tunjukkan Rute</button>
-  <input type="text" class="input-search" id="searchInput" placeholder="Cari alamat mahasiswa..." />
+  <input type="text" class="input-search" id="searchInput" placeholder="Cari ..." />
   </div>
 
   <!-- Table Mahasiswa -->

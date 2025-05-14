@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../Koneksi/config.php';
+include '../config.php';
 
 if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
   header("Location: ../index.html");
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if (mysqli_query($conn, $update)) {
     mysqli_query($conn, "INSERT INTO history (user_nim, aktivitas) VALUES ('{$_SESSION['user']['nim']}', 'Edit data mahasiswa NIM $nim')");
-    header("Location: ../dashboard_admin.php");
+    header("Location: dashboard_admin.php");
     exit();
   } else {
     $error = "Gagal memperbarui data.";
@@ -102,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
       <button type="submit">Simpan Perubahan</button>
     </form>
-    <a href="../dashboard_admin.php" class="back-btn">← Kembali</a>
+    <a href="dashboard_admin.php" class="back-btn">← Kembali</a>
   </div>
 </body>
 </html>

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (table) {
     table.addEventListener("click", (e) => {
       const tr = e.target.closest("tr");
-      if (!tr) return;
+      if (!tr || tr.parentElement.tagName !== "TBODY") return;
       selectRow(tr);
     });
   }
@@ -19,9 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const deleteBtn = document.getElementById("deleteBtn");
   if (deleteBtn) deleteBtn.addEventListener("click", hapusData);
-
-  const logBtn = document.getElementById("logBtn");
-  if (logBtn) logBtn.addEventListener("click", lihatAktivitas);
 
   const routeBtn = document.getElementById("routeBtn");
   if (routeBtn) routeBtn.addEventListener("click", showRoute);
@@ -40,24 +37,20 @@ function selectRow(row) {
 }
 
 function setToolbarState(enabled) {
-  ["editBtn", "deleteBtn", "logBtn", "routeBtn"].forEach(id => {
+  ["editBtn", "deleteBtn", "routeBtn"].forEach(id => {
     const btn = document.getElementById(id);
     if (btn) btn.disabled = !enabled;
   });
 }
 
 function editData() {
-  if (selectedNIM) window.location.href = "mahasiswa/edit.php?nim=" + selectedNIM;
+  if (selectedNIM) window.location.href = "edit.php?nim=" + selectedNIM;
 }
 
 function hapusData() {
   if (selectedNIM && confirm("Yakin ingin menghapus data ini?")) {
-    window.location.href = "mahasiswa/delete.php?nim=" + selectedNIM;
+    window.location.href = "delete.php?nim=" + selectedNIM;
   }
-}
-
-function lihatAktivitas() {
-  if (selectedNIM) window.location.href = "aktivitas/log.php?nim=" + selectedNIM;
 }
 
 function showRoute() {

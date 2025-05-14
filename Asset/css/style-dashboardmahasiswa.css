@@ -19,14 +19,14 @@ body {
   color: #333;
 }
 
-.navbar-right a {
+.navbar-right {
   text-decoration: none;
   color: #333;
   font-weight: 500;
   margin-left: 20px;
 }
 
-.navbar-right a:hover {
+.navbar-right :hover {
   color: #007bff;
 }
 
