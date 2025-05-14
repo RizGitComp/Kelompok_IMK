@@ -29,19 +29,18 @@ if ($result && mysqli_num_rows($result) === 1) {
 <body>
 <!-- Navbar -->
 <nav class="navbar">
-  <div style="display: flex; align-items: center; gap: 30px;">
+  <div class="navbar-left">
     <div class="navbar-title">Aplikasi Data Mahasiswa</div>
-    <a href="profil_saya.php" class="nav-link">Profil Saya</a>
+    <a href="profil_saya.php" class="btn-nav">Profil Saya</a>
   </div>
-  <form method="post" style="margin: 0;">
-    <button type="submit" name="logout" class="logout-btn">Logout</button>
-  </form>
+  <div class="navbar-right">
+    <a href="logout.php" class="btn-logout" onclick="return confirm('Yakin ingin logout?')">Logout</a>
+  </div>
 </nav>
 
 <!-- Main Content -->
 <div class="container">
   <h2>Selamat datang, <?= htmlspecialchars($nama) ?></h2>
-
   <div class="toolbar">
     <input type="text" class="input-search" id="searchInput" placeholder="Cari alamat mahasiswa..." />
     <button class="btn" onclick="searchMahasiswa()">🔍 Cari Mahasiswa</button>
