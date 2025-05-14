@@ -31,9 +31,10 @@
   /* Login Container */
   .container {
     background: white;
+    margin-top: 80px;
     padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     width: 350px;
     z-index: 2;
   }
@@ -46,15 +47,34 @@
   }
   
   .input-box {
-    display: flex;
-    align-items: center;
-    margin-top: 5px;
-    background: #f1f1f1;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
   }
   
+.input-box input {
+   width: 100%;
+  padding: 10px;
+  padding-right: 30px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-box i {
+  position: absolute;
+  right: 10px;
+  color: #888;
+}
+
+
+.toggle-password {
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 16px;
+  user-select: none;
+}
+
   .input-box .icon {
     margin-right: 8px;
     font-size: 18px;
@@ -121,7 +141,37 @@
     right: 20%;
   }
   
-  /* Floating Animation */
+  .logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-uin {
+  width: 140px;
+  height: auto;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px; /* opsional: sudut sedikit melengkung */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+
+.logo-uin:hover {
+  transform: scale(1.05);
+}
+
+.uin-text {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
   @keyframes float {
     0%   { transform: translateY(0px); }
     50%  { transform: translateY(-15px); }
@@ -129,7 +179,7 @@
   }
   
   /* Responsive Design */
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     .header-title {
       font-size: 24px;
       top: 30px;
@@ -137,8 +187,9 @@
     }
   
     .container {
+      margin-top: 100px;
       width: 90%;
-      padding: 30px 20px;
+      padding: 20px;
     }
   
     .shape1 {
@@ -150,4 +201,10 @@
   
     .shape2 {
       bottom: 40px;
+    }
+
+     .header-title {
+    font-size: 20px;
+    text-align: center;
+     }
     }
