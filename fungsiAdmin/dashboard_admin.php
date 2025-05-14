@@ -38,7 +38,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
   <button class="btn" id="editBtn" disabled>✏️ Edit Data</button>
   <button class="btn" id="deleteBtn" disabled>🗑️ Hapus Data</button>
   <button class="btn" id="routeBtn" disabled>📍 Tunjukkan Rute</button>
-  <input type="text" class="input-search" id="searchInput" placeholder="Cari ..." />
+  <input type="text" class="input-search" id="searchInput" placeholder="Cari Mahasiswa ..." />
   </div>
 
   <!-- Table Mahasiswa -->

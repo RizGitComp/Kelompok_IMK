@@ -42,7 +42,7 @@ if ($result && mysqli_num_rows($result) === 1) {
 <div class="container">
   <h2>Selamat datang, <?= htmlspecialchars($nama) ?></h2>
   <div class="toolbar">
-    <input type="text" class="input-search" id="searchInput" placeholder="Cari alamat mahasiswa..." />
+    <input type="text" class="input-search" id="searchInput" placeholder="Cari Mahasiswa..." />
     <button class="btn" onclick="searchMahasiswa()">🔍 Cari Mahasiswa</button>
   </div>
 

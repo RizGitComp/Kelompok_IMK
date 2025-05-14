@@ -64,7 +64,7 @@ function searchMahasiswa() {
   const input = document.getElementById("searchInput").value.toLowerCase();
   const rows = document.querySelectorAll("#mahasiswaTable tbody tr");
   rows.forEach(row => {
-    const alamat = row.cells[4].textContent.toLowerCase();
-    row.style.display = alamat.includes(input) ? "" : "none";
+    const nama = row.cells[1].textContent.toLowerCase();
+    row.style.display = nama.includes(input) ? "" : "none";
   });
 }
