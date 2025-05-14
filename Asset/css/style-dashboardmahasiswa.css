@@ -120,3 +120,9 @@ tr:hover {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.btn-route:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #666;
+}

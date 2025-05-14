@@ -72,7 +72,7 @@ if ($result && mysqli_num_rows($result) === 1) {
     </tbody>
   </table>
 
-  <button id="routeBtn" class="route-btn" style="display:none;" onclick="showRoute()">Tunjukkan Rute</button>
+  <button id="routeBtn" class="route-btn" disabled onclick="showRoute()">Tunjukkan Rute</button>
 </div>
 
 <script src="../Asset/js/js-mahasiswa.js"></script>

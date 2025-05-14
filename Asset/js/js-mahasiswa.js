@@ -4,7 +4,7 @@ function selectMahasiswa(row) {
   if (selectedRow) selectedRow.style.backgroundColor = '';
   selectedRow = row;
   row.style.backgroundColor = '#e3f2fd';
-  document.getElementById("routeBtn").style.display = "inline-block";
+  document.getElementById("routeBtn").disabled = false;
 }
 
 function showRoute() {
